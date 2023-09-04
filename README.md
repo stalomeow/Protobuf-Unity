@@ -10,4 +10,4 @@ This is a Unity package based on Protocol Buffers v24.2. For more information, p
 
 ## License
 
-The codes in the Runtime/Core folder are licensed under [Google's LICENSE](Runtime/Core/LICENSE), and the rest are licensed under [the MIT LICENSE](LICNESE).
+The codes in the Runtime/Core folder are licensed under [Google's LICENSE](Runtime/Core/LICENSE), and the rest are licensed under [the MIT LICENSE](LICENSE).
