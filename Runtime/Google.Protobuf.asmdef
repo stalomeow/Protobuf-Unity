@@ -1,0 +1,16 @@
+{
+    "name": "Google.Protobuf",
+    "rootNamespace": "",
+    "references": [
+        "GUID:c199c4c4d8f7b25428d3263865b4dc76"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
