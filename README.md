@@ -1,7 +1,8 @@
 # Protocol Buffers for Unity
 
-> [!IMPORTANT]
-> None of the repo, the tool, nor the repo owner is affiliated with, or sponsored or authorized by, Google or its affiliates.
+**None of the repo, the tool, nor the repo owner is affiliated with, or sponsored or authorized by, Google or its affiliates.**
+
+## Overview
 
 Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. For more information, please check the original repository at [https://github.com/protocolbuffers/protobuf](https://github.com/protocolbuffers/protobuf).
 
