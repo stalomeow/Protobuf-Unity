@@ -11,6 +11,12 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "Unity",
+            "expression": "0.0.0",
+            "define": "GOOGLE_PROTOBUF_SUPPORT_FAST_STRING"
+        }
+    ],
     "noEngineReferences": false
 }
