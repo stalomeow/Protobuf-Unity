@@ -1,11 +1,11 @@
 {
   "name": "com.stalomeow.google-protobuf",
-  "version": "24.4.1",
+  "version": "24.4.2",
   "author": "Stalo",
   "displayName": "Protocol Buffers",
   "description": "Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data.",
   "dependencies": {
-    "com.unity.nuget.mono-cecil": "1.10.0"
+    "com.unity.nuget.mono-cecil": "1.10.1"
   },
-  "unity": "2020.3"
+  "unity": "2021.3"
 }

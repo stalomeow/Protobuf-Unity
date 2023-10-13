@@ -10,7 +10,6 @@ namespace Google.Protobuf.CodeGen
         public static void As(MethodDefinition method)
         {
             ILProcessor il = method.Body.GetILProcessor();
-            il.Clear();
 
             // Impl
             il.Emit(OpCodes.Ldarg_0);
@@ -20,7 +19,6 @@ namespace Google.Protobuf.CodeGen
         public static void Add(MethodDefinition method)
         {
             ILProcessor il = method.Body.GetILProcessor();
-            il.Clear();
 
             // Impl
             il.Emit(OpCodes.Ldarg_0);
@@ -35,7 +33,6 @@ namespace Google.Protobuf.CodeGen
         public static void AddByteOffset(MethodDefinition method)
         {
             ILProcessor il = method.Body.GetILProcessor();
-            il.Clear();
 
             // Impl
             il.Emit(OpCodes.Ldarg_0);
@@ -47,7 +44,6 @@ namespace Google.Protobuf.CodeGen
         public static void ReadUnaligned(MethodDefinition method)
         {
             ILProcessor il = method.Body.GetILProcessor();
-            il.Clear();
 
             // Impl
             il.Emit(OpCodes.Ldarg_0);
@@ -59,7 +55,6 @@ namespace Google.Protobuf.CodeGen
         public static void WriteUnaligned(MethodDefinition method)
         {
             ILProcessor il = method.Body.GetILProcessor();
-            il.Clear();
 
             // Impl
             il.Emit(OpCodes.Ldarg_0);

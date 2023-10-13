@@ -10,9 +10,10 @@ Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neut
 
 This repo offers a package that simplifies the process of importing the latest version of Protocol Buffers into Unity. The source code of Protocol Buffers, by default v24.4 (**without any modifications**), can be found in the [Runtime/Core](Runtime/Core) folder.
 
-## Dependencies
+## Requirements
 
-- Mono Cecil
+- Unity >= 2021.3.
+- Mono Cecil >= 1.10.1.
 
 ## Message Pool
 
