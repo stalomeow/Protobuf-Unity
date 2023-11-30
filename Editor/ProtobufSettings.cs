@@ -14,6 +14,7 @@ namespace Google.Protobuf.Editor
         [SerializeField] public List<string> ProtoPaths = new();
         [SerializeField] public string FileExtension = ".cs";
         [SerializeField] public string BaseNamespace = "";
+        [SerializeField] public bool EnableBaseNamespace = false;
         [SerializeField] public bool InternalAccess = false;
         [SerializeField] public bool Serializable = false;
         [SerializeField] public string AdditionalArgs = "";

@@ -106,9 +106,9 @@ namespace Google.Protobuf.Editor
 
             csharpOptionArgs.AppendFormat("file_extension={0}", settings.FileExtension);
 
-            if (!string.IsNullOrWhiteSpace(settings.BaseNamespace))
+            if (settings.EnableBaseNamespace)
             {
-                csharpOptionArgs.AppendFormat(",base_namespace={0}", settings.BaseNamespace);
+                csharpOptionArgs.AppendFormat(",base_namespace={0}", settings.BaseNamespace ?? "");
             }
 
             if (settings.InternalAccess)

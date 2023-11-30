@@ -19,6 +19,7 @@ namespace Google.Protobuf.Editor
         private SerializedProperty m_OutputPath;
         private SerializedProperty m_FileExtension;
         private SerializedProperty m_BaseNamespace;
+        private SerializedProperty m_EnableBaseNamespace;
         private SerializedProperty m_InternalAccess;
         private SerializedProperty m_Serializable;
         private SerializedProperty m_AdditionalArgs;
@@ -79,7 +80,15 @@ namespace Google.Protobuf.Editor
             EditorGUILayout.Space();
             EditorGUILayout.LabelField("Advanced Compiler Options", EditorStyles.boldLabel);
             m_FileExtension.stringValue = EditorGUILayout.TextField(Labels.FileExtension, m_FileExtension.stringValue);
-            m_BaseNamespace.stringValue = EditorGUILayout.TextField(Labels.BaseNamespace, m_BaseNamespace.stringValue);
+
+            m_EnableBaseNamespace.boolValue = EditorGUILayout.Toggle(Labels.EnableBaseNamespace, m_EnableBaseNamespace.boolValue);
+            using (new EditorGUI.DisabledScope(!m_EnableBaseNamespace.boolValue))
+            {
+                EditorGUI.indentLevel++;
+                m_BaseNamespace.stringValue = EditorGUILayout.TextField(Labels.BaseNamespace, m_BaseNamespace.stringValue);
+                EditorGUI.indentLevel--;
+            }
+
             m_InternalAccess.boolValue = EditorGUILayout.Toggle(Labels.InternalAccess, m_InternalAccess.boolValue);
             m_Serializable.boolValue = EditorGUILayout.Toggle(Labels.Serializable, m_Serializable.boolValue);
             m_AdditionalArgs.stringValue = EditorGUILayout.TextField(Labels.AdditionalArgs, m_AdditionalArgs.stringValue);
@@ -148,6 +157,9 @@ namespace Google.Protobuf.Editor
 
             public static readonly GUIContent BaseNamespace = new("Base Namespace",
                 "When this option is specified, the generator creates a directory hierarchy for generated source code corresponding to the namespaces of the generated classes, using the value of the option to indicate which part of the namespace should be considered as the \"base\" for the output directory.");
+
+            public static readonly GUIContent EnableBaseNamespace = new("Enable Base Namespace",
+                "Enables Base Namespace");
 
             public static readonly GUIContent InternalAccess = new("Internal Access",
                 "When this option is specified, the generator creates types with the internal access modifier instead of public.");
