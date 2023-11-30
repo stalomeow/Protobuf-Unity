@@ -23,15 +23,15 @@ namespace Google.Protobuf
             public Node Next;
         }
 
-        private static volatile T s_FastItem;
-        private static volatile Node s_Head;
-        private static volatile Node s_FreeList;
-        private static volatile int s_NodeCount;
+        private static volatile T _fastItem;
+        private static volatile Node _head;
+        private static volatile Node _freeList;
+        private static volatile int _nodeCount;
 
         public static T Get()
         {
             // Fast Path
-            T item = Exchange(ref s_FastItem, null);
+            T item = Exchange(ref _fastItem, null);
 
             // CAS s_Head
             if (item == null)
@@ -40,7 +40,7 @@ namespace Google.Protobuf
 
                 while (true)
                 {
-                    Node node = s_Head;
+                    Node node = _head;
 
                     if (node == null)
                     {
@@ -48,15 +48,15 @@ namespace Google.Protobuf
                         break;
                     }
 
-                    if (CompareExchange(ref s_Head, node.Next, node) == node)
+                    if (CompareExchange(ref _head, node.Next, node) == node)
                     {
                         item = node.Item;
-                        Decrement(ref s_NodeCount);
+                        Decrement(ref _nodeCount);
 
                         // Recycle Node（Only one try）
                         node.Item = null;
-                        node.Next = s_FreeList;
-                        CompareExchange(ref s_FreeList, node, node.Next);
+                        node.Next = _freeList;
+                        CompareExchange(ref _freeList, node, node.Next);
                         break;
                     }
 
@@ -75,7 +75,7 @@ namespace Google.Protobuf
             }
 
             // Fast Path
-            if (CompareExchange(ref s_FastItem, item, null) == null)
+            if (CompareExchange(ref _fastItem, item, null) == null)
             {
                 return;
             }
@@ -85,14 +85,14 @@ namespace Google.Protobuf
             // Check Size
             while (true)
             {
-                int count = s_NodeCount;
+                int count = _nodeCount;
 
                 if (count >= MessagePool.MaxSize)
                 {
                     return;
                 }
 
-                if (CompareExchange(ref s_NodeCount, count + 1, count) == count)
+                if (CompareExchange(ref _nodeCount, count + 1, count) == count)
                 {
                     break;
                 }
@@ -102,8 +102,8 @@ namespace Google.Protobuf
             spinWait.Reset();
 
             // Get recycled Node (Only one try)
-            Node node = s_FreeList;
-            if (node is null || CompareExchange(ref s_FreeList, node.Next, node) != node)
+            Node node = _freeList;
+            if (node is null || CompareExchange(ref _freeList, node.Next, node) != node)
             {
                 node = new Node();
             }
@@ -112,9 +112,9 @@ namespace Google.Protobuf
             // CAS s_Head
             while (true)
             {
-                node.Next = s_Head;
+                node.Next = _head;
 
-                if (CompareExchange(ref s_Head, node, node.Next) == node.Next)
+                if (CompareExchange(ref _head, node, node.Next) == node.Next)
                 {
                     break;
                 }
