@@ -25,6 +25,10 @@ In order to take advantage of the Message Pool, we should modify `protoc`, the c
 
 I have done it for you. The codes can be found at [https://github.com/stalomeow/protobuf](https://github.com/stalomeow/protobuf). With this customized compiler, all messages will implement `System.IDisposable` interface and will be recycled into Message Pool when their `Dispose` methods are called.
 
+## Cmd Message
+
+See [github.com/stalomeow/protocmd](https://github.com/stalomeow/protocmd).
+
 ## Unity Editor Supports
 
 ![editor-utils](/Screenshots~/editor_utils.png)
