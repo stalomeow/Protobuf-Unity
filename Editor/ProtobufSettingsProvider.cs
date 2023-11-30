@@ -159,7 +159,7 @@ namespace Google.Protobuf.Editor
                 "When this option is specified, the generator creates a directory hierarchy for generated source code corresponding to the namespaces of the generated classes, using the value of the option to indicate which part of the namespace should be considered as the \"base\" for the output directory.");
 
             public static readonly GUIContent EnableBaseNamespace = new("Enable Base Namespace",
-                "Enables Base Namespace");
+                "Enables Base Namespace.");
 
             public static readonly GUIContent InternalAccess = new("Internal Access",
                 "When this option is specified, the generator creates types with the internal access modifier instead of public.");
