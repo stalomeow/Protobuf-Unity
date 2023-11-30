@@ -23,7 +23,7 @@ This package provides a thread-safe and lock-free object pool for Protobuf Messa
 
 In order to take advantage of the Message Pool, we should modify `protoc`, the compiler of protobuf, to customize the C# File output.
 
-I have done it for you but you should compile `protoc` manually. The codes can be found at [https://github.com/stalomeow/protobuf](https://github.com/stalomeow/protobuf). With this customized compiler, all messages implement `System.IDisposable` interface and will be recycled into Message Pool when their `Dispose` methods are called.
+I have done it for you. The codes can be found at [https://github.com/stalomeow/protobuf](https://github.com/stalomeow/protobuf). With this customized compiler, all messages will implement `System.IDisposable` interface and will be recycled into Message Pool when their `Dispose` methods are called.
 
 ## Unity Editor Supports
 
