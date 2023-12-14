@@ -17,7 +17,7 @@ This repo offers a package that simplifies the process of importing the latest v
 
 ## Message Pool
 
-This package provides a thread-safe and lock-free object pool for Protobuf Messages. The codes can be found in [Runtime/Extensions/MessagePool.cs](Runtime/Extensions/MessagePool.cs).
+This package provides a thread-safe object pool for Protobuf Messages. The codes can be found in [Runtime/Extensions/MessagePool.cs](Runtime/Extensions/MessagePool.cs).
 
 ### Customize C# Proto File Output
 

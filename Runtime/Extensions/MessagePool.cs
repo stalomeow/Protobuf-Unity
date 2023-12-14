@@ -1,66 +1,51 @@
+using System.Collections.Generic;
 using System.Threading;
 using static System.Threading.Interlocked;
 
 namespace Google.Protobuf
 {
     /// <summary>
-    /// A thread-safe and lock-free object pool for Protobuf Messages.
+    /// A thread-safe object pool for Protobuf Messages.
     /// </summary>
     public static class MessagePool
     {
-        public static volatile int MaxSize = 100;
+        public static int MaxSize = 1000;
     }
 
     /// <summary>
-    /// A thread-safe and lock-free object pool for Protobuf Messages.
+    /// A thread-safe object pool for Protobuf Messages.
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public static class MessagePool<T> where T : class, new()
     {
-        private class Node
-        {
-            public T Item;
-            public Node Next;
-        }
-
-        private static volatile T _fastItem;
-        private static volatile Node _head;
-        private static volatile Node _freeList;
-        private static volatile int _nodeCount;
+        private static T _fastItem;
+        private static Stack<T> _restItems;
+        private static SpinLock _spinLock;
 
         public static T Get()
         {
             // Fast Path
             T item = Exchange(ref _fastItem, null);
 
-            // CAS s_Head
             if (item == null)
             {
-                var spinWait = new SpinWait();
+                bool lockTaken = false;
 
-                while (true)
+                try
                 {
-                    Node node = _head;
+                    _spinLock.Enter(ref lockTaken);
 
-                    if (node == null)
+                    if (_restItems == null || !_restItems.TryPop(out item))
                     {
                         item = new T();
-                        break;
                     }
-
-                    if (CompareExchange(ref _head, node.Next, node) == node)
+                }
+                finally
+                {
+                    if (lockTaken)
                     {
-                        item = node.Item;
-                        Decrement(ref _nodeCount);
-
-                        // Recycle Node（Only one try）
-                        node.Item = null;
-                        node.Next = _freeList;
-                        CompareExchange(ref _freeList, node, node.Next);
-                        break;
+                        _spinLock.Exit(useMemoryBarrier: false);
                     }
-
-                    spinWait.SpinOnce();
                 }
             }
 
@@ -80,46 +65,24 @@ namespace Google.Protobuf
                 return;
             }
 
-            var spinWait = new SpinWait();
+            bool lockTaken = false;
 
-            // Check Size
-            while (true)
+            try
             {
-                int count = _nodeCount;
+                _spinLock.Enter(ref lockTaken);
 
-                if (count >= MessagePool.MaxSize)
+                _restItems ??= new Stack<T>();
+                if (_restItems.Count < MessagePool.MaxSize)
                 {
-                    return;
+                    _restItems.Push(item);
                 }
-
-                if (CompareExchange(ref _nodeCount, count + 1, count) == count)
-                {
-                    break;
-                }
-
-                spinWait.SpinOnce();
             }
-            spinWait.Reset();
-
-            // Get recycled Node (Only one try)
-            Node node = _freeList;
-            if (node is null || CompareExchange(ref _freeList, node.Next, node) != node)
+            finally
             {
-                node = new Node();
-            }
-            node.Item = item;
-
-            // CAS s_Head
-            while (true)
-            {
-                node.Next = _head;
-
-                if (CompareExchange(ref _head, node, node.Next) == node.Next)
+                if (lockTaken)
                 {
-                    break;
+                    _spinLock.Exit(useMemoryBarrier: false);
                 }
-
-                spinWait.SpinOnce();
             }
         }
     }
