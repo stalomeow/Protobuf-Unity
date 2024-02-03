@@ -15,7 +15,7 @@ namespace Google.Protobuf.CodeGen
     {
         public override ILPostProcessor GetInstance() => this;
 
-        public override bool WillProcess(ICompiledAssembly compiledAssembly) => compiledAssembly.Name == "Google.Protobuf.Unsafe";
+        public override bool WillProcess(ICompiledAssembly compiledAssembly) => compiledAssembly.Name == "Google.Protobuf";
 
         public override ILPostProcessResult Process(ICompiledAssembly compiledAssembly)
         {
@@ -79,7 +79,7 @@ namespace Google.Protobuf.CodeGen
             var readerParameters = new ReaderParameters
             {
                 InMemory = true,
-                ReadingMode = ReadingMode.Immediate
+                ReadingMode = ReadingMode.Deferred
             };
 
             if (symbolReader != null)

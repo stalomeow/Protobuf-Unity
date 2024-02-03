@@ -64,12 +64,14 @@ namespace Google.Protobuf.WellKnownTypes {
   /// this message itself. See https://cloud.google.com/apis/design/glossary for
   /// detailed terminology.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Api : pb::IMessage<Api>
+      , global::System.IDisposable
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Api> _parser = new pb::MessageParser<Api>(() => new Api());
+    private static readonly pb::MessageParser<Api> _parser = new pb::MessageParser<Api>(Api.NewFromPool);
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -94,6 +96,41 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static Api NewFromPool() {
+      return pb::MessagePool<Api>.Get();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void Dispose() {
+      OnDispose();
+      name_ = "";
+      for (int i = 0; i < methods_.Count; i++) {
+        methods_[i].Dispose();
+      }
+      methods_.Clear();
+      for (int i = 0; i < options_.Count; i++) {
+        options_[i].Dispose();
+      }
+      options_.Clear();
+      version_ = "";
+      if (sourceContext_ != null) {
+        sourceContext_.Dispose();
+        sourceContext_ = null;
+      }
+      for (int i = 0; i < mixins_.Count; i++) {
+        mixins_[i].Dispose();
+      }
+      mixins_.Clear();
+      syntax_ = global::Google.Protobuf.WellKnownTypes.Syntax.Proto2;
+      _unknownFields = null;
+      pb::MessagePool<Api>.Release(this);
+    }
+
+    partial void OnDispose();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -385,7 +422,7 @@ namespace Google.Protobuf.WellKnownTypes {
       }
       if (other.sourceContext_ != null) {
         if (sourceContext_ == null) {
-          SourceContext = new global::Google.Protobuf.WellKnownTypes.SourceContext();
+          SourceContext = global::Google.Protobuf.WellKnownTypes.SourceContext.NewFromPool();
         }
         SourceContext.MergeFrom(other.SourceContext);
       }
@@ -426,7 +463,7 @@ namespace Google.Protobuf.WellKnownTypes {
           }
           case 42: {
             if (sourceContext_ == null) {
-              SourceContext = new global::Google.Protobuf.WellKnownTypes.SourceContext();
+              SourceContext = global::Google.Protobuf.WellKnownTypes.SourceContext.NewFromPool();
             }
             input.ReadMessage(SourceContext);
             break;
@@ -472,7 +509,7 @@ namespace Google.Protobuf.WellKnownTypes {
           }
           case 42: {
             if (sourceContext_ == null) {
-              SourceContext = new global::Google.Protobuf.WellKnownTypes.SourceContext();
+              SourceContext = global::Google.Protobuf.WellKnownTypes.SourceContext.NewFromPool();
             }
             input.ReadMessage(SourceContext);
             break;
@@ -495,12 +532,14 @@ namespace Google.Protobuf.WellKnownTypes {
   /// <summary>
   /// Method represents a method of an API interface.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Method : pb::IMessage<Method>
+      , global::System.IDisposable
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Method> _parser = new pb::MessageParser<Method>(() => new Method());
+    private static readonly pb::MessageParser<Method> _parser = new pb::MessageParser<Method>(Method.NewFromPool);
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -525,6 +564,32 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static Method NewFromPool() {
+      return pb::MessagePool<Method>.Get();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void Dispose() {
+      OnDispose();
+      name_ = "";
+      requestTypeUrl_ = "";
+      requestStreaming_ = false;
+      responseTypeUrl_ = "";
+      responseStreaming_ = false;
+      for (int i = 0; i < options_.Count; i++) {
+        options_[i].Dispose();
+      }
+      options_.Clear();
+      syntax_ = global::Google.Protobuf.WellKnownTypes.Syntax.Proto2;
+      _unknownFields = null;
+      pb::MessagePool<Method>.Release(this);
+    }
+
+    partial void OnDispose();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -996,12 +1061,14 @@ namespace Google.Protobuf.WellKnownTypes {
   ///       ...
   ///     }
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Mixin : pb::IMessage<Mixin>
+      , global::System.IDisposable
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Mixin> _parser = new pb::MessageParser<Mixin>(() => new Mixin());
+    private static readonly pb::MessageParser<Mixin> _parser = new pb::MessageParser<Mixin>(Mixin.NewFromPool);
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1026,6 +1093,24 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static Mixin NewFromPool() {
+      return pb::MessagePool<Mixin>.Get();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void Dispose() {
+      OnDispose();
+      name_ = "";
+      root_ = "";
+      _unknownFields = null;
+      pb::MessagePool<Mixin>.Release(this);
+    }
+
+    partial void OnDispose();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

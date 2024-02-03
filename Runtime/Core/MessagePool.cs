@@ -1,17 +1,9 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading;
 using static System.Threading.Interlocked;
 
 namespace Google.Protobuf
 {
-    /// <summary>
-    /// A thread-safe object pool for Protobuf Messages.
-    /// </summary>
-    public static class MessagePool
-    {
-        public static int MaxSize = 1000;
-    }
-
     /// <summary>
     /// A thread-safe object pool for Protobuf Messages.
     /// </summary>
@@ -21,7 +13,21 @@ namespace Google.Protobuf
         private static T _fastItem;
         private static Stack<T> _restItems;
         private static SpinLock _spinLock;
+        private static int _maxSize = 10000;
 
+        /// <summary>
+        /// The max size of the pool.
+        /// </summary>
+        public static int MaxSize
+        {
+            get { return _maxSize; }
+            set { Exchange(ref _maxSize, value); }
+        }
+
+        /// <summary>
+        /// Gets an object from the pool.
+        /// </summary>
+        /// <returns></returns>
         public static T Get()
         {
             // Fast Path
@@ -35,9 +41,13 @@ namespace Google.Protobuf
                 {
                     _spinLock.Enter(ref lockTaken);
 
-                    if (_restItems == null || !_restItems.TryPop(out item))
+                    if (_restItems == null || _restItems.Count == 0)
                     {
                         item = new T();
+                    }
+                    else
+                    {
+                        item = _restItems.Pop();
                     }
                 }
                 finally
@@ -52,6 +62,10 @@ namespace Google.Protobuf
             return item;
         }
 
+        /// <summary>
+        /// Releases an object to the pool.
+        /// </summary>
+        /// <param name="item"></param>
         public static void Release(T item)
         {
             if (item == null)
@@ -72,7 +86,7 @@ namespace Google.Protobuf
                 _spinLock.Enter(ref lockTaken);
 
                 _restItems ??= new Stack<T>();
-                if (_restItems.Count < MessagePool.MaxSize)
+                if (_restItems.Count < _maxSize)
                 {
                     _restItems.Push(item);
                 }

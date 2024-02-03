@@ -48,12 +48,14 @@ namespace Google.Protobuf.WellKnownTypes {
   ///       rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);
   ///     }
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Empty : pb::IMessage<Empty>
+      , global::System.IDisposable
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Empty> _parser = new pb::MessageParser<Empty>(() => new Empty());
+    private static readonly pb::MessageParser<Empty> _parser = new pb::MessageParser<Empty>(Empty.NewFromPool);
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -78,6 +80,22 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static Empty NewFromPool() {
+      return pb::MessagePool<Empty>.Get();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void Dispose() {
+      OnDispose();
+      _unknownFields = null;
+      pb::MessagePool<Empty>.Release(this);
+    }
+
+    partial void OnDispose();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

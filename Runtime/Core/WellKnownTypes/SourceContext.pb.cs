@@ -44,12 +44,14 @@ namespace Google.Protobuf.WellKnownTypes {
   /// `SourceContext` represents information about the source of a
   /// protobuf element, like the file in which it is defined.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SourceContext : pb::IMessage<SourceContext>
+      , global::System.IDisposable
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SourceContext> _parser = new pb::MessageParser<SourceContext>(() => new SourceContext());
+    private static readonly pb::MessageParser<SourceContext> _parser = new pb::MessageParser<SourceContext>(SourceContext.NewFromPool);
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -74,6 +76,23 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static SourceContext NewFromPool() {
+      return pb::MessagePool<SourceContext>.Get();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void Dispose() {
+      OnDispose();
+      fileName_ = "";
+      _unknownFields = null;
+      pb::MessagePool<SourceContext>.Release(this);
+    }
+
+    partial void OnDispose();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

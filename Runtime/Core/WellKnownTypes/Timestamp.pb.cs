@@ -131,12 +131,14 @@ namespace Google.Protobuf.WellKnownTypes {
   /// http://joda-time.sourceforge.net/apidocs/org/joda/time/format/ISODateTimeFormat.html#dateTime()
   /// ) to obtain a formatter capable of generating timestamps in this format.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Timestamp : pb::IMessage<Timestamp>
+      , global::System.IDisposable
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Timestamp> _parser = new pb::MessageParser<Timestamp>(() => new Timestamp());
+    private static readonly pb::MessageParser<Timestamp> _parser = new pb::MessageParser<Timestamp>(Timestamp.NewFromPool);
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -161,6 +163,24 @@ namespace Google.Protobuf.WellKnownTypes {
     }
 
     partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static Timestamp NewFromPool() {
+      return pb::MessagePool<Timestamp>.Get();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void Dispose() {
+      OnDispose();
+      seconds_ = 0L;
+      nanos_ = 0;
+      _unknownFields = null;
+      pb::MessagePool<Timestamp>.Release(this);
+    }
+
+    partial void OnDispose();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

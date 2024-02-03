@@ -33,24 +33,25 @@ namespace Google.Protobuf.Compiler {
             "LnByb3RvYnVmLkZpbGVEZXNjcmlwdG9yUHJvdG8SRQoXc291cmNlX2ZpbGVf",
             "ZGVzY3JpcHRvcnMYESADKAsyJC5nb29nbGUucHJvdG9idWYuRmlsZURlc2Ny",
             "aXB0b3JQcm90bxI7ChBjb21waWxlcl92ZXJzaW9uGAMgASgLMiEuZ29vZ2xl",
-            "LnByb3RvYnVmLmNvbXBpbGVyLlZlcnNpb24i4AIKFUNvZGVHZW5lcmF0b3JS",
+            "LnByb3RvYnVmLmNvbXBpbGVyLlZlcnNpb24ikgMKFUNvZGVHZW5lcmF0b3JS",
             "ZXNwb25zZRINCgVlcnJvchgBIAEoCRIaChJzdXBwb3J0ZWRfZmVhdHVyZXMY",
-            "AiABKAQSQgoEZmlsZRgPIAMoCzI0Lmdvb2dsZS5wcm90b2J1Zi5jb21waWxl",
-            "ci5Db2RlR2VuZXJhdG9yUmVzcG9uc2UuRmlsZRp/CgRGaWxlEgwKBG5hbWUY",
-            "ASABKAkSFwoPaW5zZXJ0aW9uX3BvaW50GAIgASgJEg8KB2NvbnRlbnQYDyAB",
-            "KAkSPwoTZ2VuZXJhdGVkX2NvZGVfaW5mbxgQIAEoCzIiLmdvb2dsZS5wcm90",
-            "b2J1Zi5HZW5lcmF0ZWRDb2RlSW5mbyJXCgdGZWF0dXJlEhAKDEZFQVRVUkVf",
-            "Tk9ORRAAEhsKF0ZFQVRVUkVfUFJPVE8zX09QVElPTkFMEAESHQoZRkVBVFVS",
-            "RV9TVVBQT1JUU19FRElUSU9OUxACQnIKHGNvbS5nb29nbGUucHJvdG9idWYu",
-            "Y29tcGlsZXJCDFBsdWdpblByb3Rvc1opZ29vZ2xlLmdvbGFuZy5vcmcvcHJv",
-            "dG9idWYvdHlwZXMvcGx1Z2lucGKqAhhHb29nbGUuUHJvdG9idWYuQ29tcGls",
-            "ZXI="));
+            "AiABKAQSFwoPbWluaW11bV9lZGl0aW9uGAMgASgFEhcKD21heGltdW1fZWRp",
+            "dGlvbhgEIAEoBRJCCgRmaWxlGA8gAygLMjQuZ29vZ2xlLnByb3RvYnVmLmNv",
+            "bXBpbGVyLkNvZGVHZW5lcmF0b3JSZXNwb25zZS5GaWxlGn8KBEZpbGUSDAoE",
+            "bmFtZRgBIAEoCRIXCg9pbnNlcnRpb25fcG9pbnQYAiABKAkSDwoHY29udGVu",
+            "dBgPIAEoCRI/ChNnZW5lcmF0ZWRfY29kZV9pbmZvGBAgASgLMiIuZ29vZ2xl",
+            "LnByb3RvYnVmLkdlbmVyYXRlZENvZGVJbmZvIlcKB0ZlYXR1cmUSEAoMRkVB",
+            "VFVSRV9OT05FEAASGwoXRkVBVFVSRV9QUk9UTzNfT1BUSU9OQUwQARIdChlG",
+            "RUFUVVJFX1NVUFBPUlRTX0VESVRJT05TEAJCcgocY29tLmdvb2dsZS5wcm90",
+            "b2J1Zi5jb21waWxlckIMUGx1Z2luUHJvdG9zWilnb29nbGUuZ29sYW5nLm9y",
+            "Zy9wcm90b2J1Zi90eXBlcy9wbHVnaW5wYqoCGEdvb2dsZS5Qcm90b2J1Zi5D",
+            "b21waWxlcg=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Compiler.Version), global::Google.Protobuf.Compiler.Version.Parser, new[]{ "Major", "Minor", "Patch", "Suffix" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Compiler.CodeGeneratorRequest), global::Google.Protobuf.Compiler.CodeGeneratorRequest.Parser, new[]{ "FileToGenerate", "Parameter", "ProtoFile", "SourceFileDescriptors", "CompilerVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Compiler.CodeGeneratorResponse), global::Google.Protobuf.Compiler.CodeGeneratorResponse.Parser, new[]{ "Error", "SupportedFeatures", "File" }, null, new[]{ typeof(global::Google.Protobuf.Compiler.CodeGeneratorResponse.Types.Feature) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Compiler.CodeGeneratorResponse.Types.File), global::Google.Protobuf.Compiler.CodeGeneratorResponse.Types.File.Parser, new[]{ "Name", "InsertionPoint", "Content", "GeneratedCodeInfo" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Compiler.CodeGeneratorResponse), global::Google.Protobuf.Compiler.CodeGeneratorResponse.Parser, new[]{ "Error", "SupportedFeatures", "MinimumEdition", "MaximumEdition", "File" }, null, new[]{ typeof(global::Google.Protobuf.Compiler.CodeGeneratorResponse.Types.Feature) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Protobuf.Compiler.CodeGeneratorResponse.Types.File), global::Google.Protobuf.Compiler.CodeGeneratorResponse.Types.File.Parser, new[]{ "Name", "InsertionPoint", "Content", "GeneratedCodeInfo" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -60,12 +61,14 @@ namespace Google.Protobuf.Compiler {
   /// <summary>
   /// The version number of protocol compiler.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Version : pb::IMessage<Version>
+      , global::System.IDisposable
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<Version> _parser = new pb::MessageParser<Version>(() => new Version());
+    private static readonly pb::MessageParser<Version> _parser = new pb::MessageParser<Version>(Version.NewFromPool);
     private pb::UnknownFieldSet _unknownFields;
     private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -91,6 +94,27 @@ namespace Google.Protobuf.Compiler {
     }
 
     partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static Version NewFromPool() {
+      return pb::MessagePool<Version>.Get();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void Dispose() {
+      OnDispose();
+      _hasBits0 = 0;
+      major_ = 0;
+      minor_ = 0;
+      patch_ = 0;
+      suffix_ = "";
+      _unknownFields = null;
+      pb::MessagePool<Version>.Release(this);
+    }
+
+    partial void OnDispose();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -428,12 +452,14 @@ namespace Google.Protobuf.Compiler {
   /// <summary>
   /// An encoded CodeGeneratorRequest is written to the plugin's stdin.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CodeGeneratorRequest : pb::IMessage<CodeGeneratorRequest>
+      , global::System.IDisposable
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CodeGeneratorRequest> _parser = new pb::MessageParser<CodeGeneratorRequest>(() => new CodeGeneratorRequest());
+    private static readonly pb::MessageParser<CodeGeneratorRequest> _parser = new pb::MessageParser<CodeGeneratorRequest>(CodeGeneratorRequest.NewFromPool);
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -458,6 +484,36 @@ namespace Google.Protobuf.Compiler {
     }
 
     partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static CodeGeneratorRequest NewFromPool() {
+      return pb::MessagePool<CodeGeneratorRequest>.Get();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void Dispose() {
+      OnDispose();
+      fileToGenerate_.Clear();
+      parameter_ = "";
+      for (int i = 0; i < protoFile_.Count; i++) {
+        protoFile_[i].Dispose();
+      }
+      protoFile_.Clear();
+      for (int i = 0; i < sourceFileDescriptors_.Count; i++) {
+        sourceFileDescriptors_[i].Dispose();
+      }
+      sourceFileDescriptors_.Clear();
+      if (compilerVersion_ != null) {
+        compilerVersion_.Dispose();
+        compilerVersion_ = null;
+      }
+      _unknownFields = null;
+      pb::MessagePool<CodeGeneratorRequest>.Release(this);
+    }
+
+    partial void OnDispose();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -705,7 +761,7 @@ namespace Google.Protobuf.Compiler {
       sourceFileDescriptors_.Add(other.sourceFileDescriptors_);
       if (other.compilerVersion_ != null) {
         if (compilerVersion_ == null) {
-          CompilerVersion = new global::Google.Protobuf.Compiler.Version();
+          CompilerVersion = global::Google.Protobuf.Compiler.Version.NewFromPool();
         }
         CompilerVersion.MergeFrom(other.CompilerVersion);
       }
@@ -734,7 +790,7 @@ namespace Google.Protobuf.Compiler {
           }
           case 26: {
             if (compilerVersion_ == null) {
-              CompilerVersion = new global::Google.Protobuf.Compiler.Version();
+              CompilerVersion = global::Google.Protobuf.Compiler.Version.NewFromPool();
             }
             input.ReadMessage(CompilerVersion);
             break;
@@ -772,7 +828,7 @@ namespace Google.Protobuf.Compiler {
           }
           case 26: {
             if (compilerVersion_ == null) {
-              CompilerVersion = new global::Google.Protobuf.Compiler.Version();
+              CompilerVersion = global::Google.Protobuf.Compiler.Version.NewFromPool();
             }
             input.ReadMessage(CompilerVersion);
             break;
@@ -795,12 +851,14 @@ namespace Google.Protobuf.Compiler {
   /// <summary>
   /// The plugin writes an encoded CodeGeneratorResponse to stdout.
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CodeGeneratorResponse : pb::IMessage<CodeGeneratorResponse>
+      , global::System.IDisposable
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CodeGeneratorResponse> _parser = new pb::MessageParser<CodeGeneratorResponse>(() => new CodeGeneratorResponse());
+    private static readonly pb::MessageParser<CodeGeneratorResponse> _parser = new pb::MessageParser<CodeGeneratorResponse>(CodeGeneratorResponse.NewFromPool);
     private pb::UnknownFieldSet _unknownFields;
     private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -829,10 +887,37 @@ namespace Google.Protobuf.Compiler {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static CodeGeneratorResponse NewFromPool() {
+      return pb::MessagePool<CodeGeneratorResponse>.Get();
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void Dispose() {
+      OnDispose();
+      _hasBits0 = 0;
+      error_ = "";
+      supportedFeatures_ = 0UL;
+      minimumEdition_ = 0;
+      maximumEdition_ = 0;
+      for (int i = 0; i < file_.Count; i++) {
+        file_[i].Dispose();
+      }
+      file_.Clear();
+      _unknownFields = null;
+      pb::MessagePool<CodeGeneratorResponse>.Release(this);
+    }
+
+    partial void OnDispose();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CodeGeneratorResponse(CodeGeneratorResponse other) : this() {
       _hasBits0 = other._hasBits0;
       error_ = other.error_;
       supportedFeatures_ = other.supportedFeatures_;
+      minimumEdition_ = other.minimumEdition_;
+      maximumEdition_ = other.maximumEdition_;
       file_ = other.file_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -910,6 +995,72 @@ namespace Google.Protobuf.Compiler {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "minimum_edition" field.</summary>
+    public const int MinimumEditionFieldNumber = 3;
+    private readonly static int MinimumEditionDefaultValue = 0;
+
+    private int minimumEdition_;
+    /// <summary>
+    /// The minimum edition this plugin supports.  This will be treated as an
+    /// Edition enum, but we want to allow unknown values.  It should be specified
+    /// according the edition enum value, *not* the edition number.  Only takes
+    /// effect for plugins that have FEATURE_SUPPORTS_EDITIONS set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MinimumEdition {
+      get { if ((_hasBits0 & 2) != 0) { return minimumEdition_; } else { return MinimumEditionDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        minimumEdition_ = value;
+      }
+    }
+    /// <summary>Gets whether the "minimum_edition" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMinimumEdition {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "minimum_edition" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMinimumEdition() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "maximum_edition" field.</summary>
+    public const int MaximumEditionFieldNumber = 4;
+    private readonly static int MaximumEditionDefaultValue = 0;
+
+    private int maximumEdition_;
+    /// <summary>
+    /// The maximum edition this plugin supports.  This will be treated as an
+    /// Edition enum, but we want to allow unknown values.  It should be specified
+    /// according the edition enum value, *not* the edition number.  Only takes
+    /// effect for plugins that have FEATURE_SUPPORTS_EDITIONS set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaximumEdition {
+      get { if ((_hasBits0 & 4) != 0) { return maximumEdition_; } else { return MaximumEditionDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        maximumEdition_ = value;
+      }
+    }
+    /// <summary>Gets whether the "maximum_edition" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaximumEdition {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "maximum_edition" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaximumEdition() {
+      _hasBits0 &= ~4;
+    }
+
     /// <summary>Field number for the "file" field.</summary>
     public const int FileFieldNumber = 15;
     private static readonly pb::FieldCodec<global::Google.Protobuf.Compiler.CodeGeneratorResponse.Types.File> _repeated_file_codec
@@ -938,6 +1089,8 @@ namespace Google.Protobuf.Compiler {
       }
       if (Error != other.Error) return false;
       if (SupportedFeatures != other.SupportedFeatures) return false;
+      if (MinimumEdition != other.MinimumEdition) return false;
+      if (MaximumEdition != other.MaximumEdition) return false;
       if(!file_.Equals(other.file_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -948,6 +1101,8 @@ namespace Google.Protobuf.Compiler {
       int hash = 1;
       if (HasError) hash ^= Error.GetHashCode();
       if (HasSupportedFeatures) hash ^= SupportedFeatures.GetHashCode();
+      if (HasMinimumEdition) hash ^= MinimumEdition.GetHashCode();
+      if (HasMaximumEdition) hash ^= MaximumEdition.GetHashCode();
       hash ^= file_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -975,6 +1130,14 @@ namespace Google.Protobuf.Compiler {
         output.WriteRawTag(16);
         output.WriteUInt64(SupportedFeatures);
       }
+      if (HasMinimumEdition) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MinimumEdition);
+      }
+      if (HasMaximumEdition) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MaximumEdition);
+      }
       file_.WriteTo(output, _repeated_file_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -994,6 +1157,14 @@ namespace Google.Protobuf.Compiler {
         output.WriteRawTag(16);
         output.WriteUInt64(SupportedFeatures);
       }
+      if (HasMinimumEdition) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MinimumEdition);
+      }
+      if (HasMaximumEdition) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MaximumEdition);
+      }
       file_.WriteTo(ref output, _repeated_file_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1010,6 +1181,12 @@ namespace Google.Protobuf.Compiler {
       }
       if (HasSupportedFeatures) {
         size += 1 + pb::CodedOutputStream.ComputeUInt64Size(SupportedFeatures);
+      }
+      if (HasMinimumEdition) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinimumEdition);
+      }
+      if (HasMaximumEdition) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaximumEdition);
       }
       size += file_.CalculateSize(_repeated_file_codec);
       if (_unknownFields != null) {
@@ -1029,6 +1206,12 @@ namespace Google.Protobuf.Compiler {
       }
       if (other.HasSupportedFeatures) {
         SupportedFeatures = other.SupportedFeatures;
+      }
+      if (other.HasMinimumEdition) {
+        MinimumEdition = other.MinimumEdition;
+      }
+      if (other.HasMaximumEdition) {
+        MaximumEdition = other.MaximumEdition;
       }
       file_.Add(other.file_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1052,6 +1235,14 @@ namespace Google.Protobuf.Compiler {
           }
           case 16: {
             SupportedFeatures = input.ReadUInt64();
+            break;
+          }
+          case 24: {
+            MinimumEdition = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            MaximumEdition = input.ReadInt32();
             break;
           }
           case 122: {
@@ -1081,6 +1272,14 @@ namespace Google.Protobuf.Compiler {
             SupportedFeatures = input.ReadUInt64();
             break;
           }
+          case 24: {
+            MinimumEdition = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            MaximumEdition = input.ReadInt32();
+            break;
+          }
           case 122: {
             file_.AddEntriesFrom(ref input, _repeated_file_codec);
             break;
@@ -1107,12 +1306,14 @@ namespace Google.Protobuf.Compiler {
       /// <summary>
       /// Represents a single generated file.
       /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class File : pb::IMessage<File>
+          , global::System.IDisposable
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<File> _parser = new pb::MessageParser<File>(() => new File());
+        private static readonly pb::MessageParser<File> _parser = new pb::MessageParser<File>(File.NewFromPool);
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1137,6 +1338,29 @@ namespace Google.Protobuf.Compiler {
         }
 
         partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static File NewFromPool() {
+          return pb::MessagePool<File>.Get();
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void Dispose() {
+          OnDispose();
+          name_ = "";
+          insertionPoint_ = "";
+          content_ = "";
+          if (generatedCodeInfo_ != null) {
+            generatedCodeInfo_.Dispose();
+            generatedCodeInfo_ = null;
+          }
+          _unknownFields = null;
+          pb::MessagePool<File>.Release(this);
+        }
+
+        partial void OnDispose();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1439,7 +1663,7 @@ namespace Google.Protobuf.Compiler {
           }
           if (other.generatedCodeInfo_ != null) {
             if (generatedCodeInfo_ == null) {
-              GeneratedCodeInfo = new global::Google.Protobuf.Reflection.GeneratedCodeInfo();
+              GeneratedCodeInfo = global::Google.Protobuf.Reflection.GeneratedCodeInfo.NewFromPool();
             }
             GeneratedCodeInfo.MergeFrom(other.GeneratedCodeInfo);
           }
@@ -1472,7 +1696,7 @@ namespace Google.Protobuf.Compiler {
               }
               case 130: {
                 if (generatedCodeInfo_ == null) {
-                  GeneratedCodeInfo = new global::Google.Protobuf.Reflection.GeneratedCodeInfo();
+                  GeneratedCodeInfo = global::Google.Protobuf.Reflection.GeneratedCodeInfo.NewFromPool();
                 }
                 input.ReadMessage(GeneratedCodeInfo);
                 break;
@@ -1506,7 +1730,7 @@ namespace Google.Protobuf.Compiler {
               }
               case 130: {
                 if (generatedCodeInfo_ == null) {
-                  GeneratedCodeInfo = new global::Google.Protobuf.Reflection.GeneratedCodeInfo();
+                  GeneratedCodeInfo = global::Google.Protobuf.Reflection.GeneratedCodeInfo.NewFromPool();
                 }
                 input.ReadMessage(GeneratedCodeInfo);
                 break;
